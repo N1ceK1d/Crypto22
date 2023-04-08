@@ -1,0 +1,33 @@
+﻿<Page x:Class="Crypto22.pages.EncryptPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Crypto22.pages"
+      mc:Ignorable="d" Background="White"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="EncryptPage">
+
+    <Grid x:Name="encryptPage">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <ComboBox x:Name="CipherSelecter" Grid.Row="0" FontSize="15" Margin="10" 
+                    IsEditable="True"
+                    IsReadOnly="True"
+                    Text="Выберите шифр"/>
+        <TextBox FontSize="15" x:Name="textMessage" Margin="10" Grid.Row="1"/>
+        <TextBox FontSize="15" x:Name="key" Margin="10"  Grid.Row="2"/>
+        <Button x:Name="EncryptBtn" Click="EncryptBtn_Click" Content="Шифровать" Grid.Row="1" Grid.Column="1" Margin="10"/>
+        <TextBlock Margin="10" FontSize="15" Grid.Row="3" Text="Результат: "/>
+        <TextBlock FontSize="15" x:Name="resultText" Grid.Column="1" Grid.Row="3" Margin="10"/>
+    </Grid>
+</Page>

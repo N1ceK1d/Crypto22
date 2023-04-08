@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -14,24 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Crypto22
+namespace Crypto22.pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для DecryptPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class DecryptPage : Page
     {
-        public static Frame frame;
-        public MainWindow()
+        public DecryptPage()
         {
             InitializeComponent();
-            frame = mainFrame;
-            frame.Content = new pages.Menu();
-        }
-
-        public static void ChangePage(Page page)
-        {
-            frame.Content = page;
         }
     }
 }

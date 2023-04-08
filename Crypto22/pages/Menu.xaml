@@ -1,0 +1,56 @@
+﻿<Page x:Class="Crypto22.pages.Menu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Crypto22.pages"
+      mc:Ignorable="d" Background="White"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Menu">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TabControl     
+            SnapsToDevicePixels="True"
+            TabStripPlacement="Top">
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel
+                        Width="auto"
+                        Height="auto">
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            Text="Шифрование" />
+                    </StackPanel>
+                </TabItem.Header>
+                <Frame x:Name="encrypt" NavigationUIVisibility="Hidden" />
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel
+                        Width="auto"
+                        Height="auto">
+                        <TextBlock
+                             HorizontalAlignment="Center"
+                             Text="Дешифрование" />
+                    </StackPanel>
+                </TabItem.Header>
+                <Frame x:Name="decrypt" NavigationUIVisibility="Hidden" />
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel
+                        Width="auto"
+                        Height="auto">
+                        <TextBlock
+                             HorizontalAlignment="Center"
+                             Text="Хэш" />
+                    </StackPanel>
+                </TabItem.Header>
+                <Frame x:Name="hash" NavigationUIVisibility="Hidden" />
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Page>
